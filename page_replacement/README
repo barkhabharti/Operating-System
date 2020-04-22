@@ -1,0 +1,51 @@
+****************************************************
+Page Replacement Algorithms in Operating Systems
+****************************************************
+
+In an operating system that uses paging for memory management, a page replacement algorithm is needed to decide
+which page needs to be replaced when new page comes in.
+
+Page Fault – A page fault happens when a running program accesses a memory page that is mapped into the virtual 
+address space, but not loaded in physical memory.
+
+Since actual physical memory is much smaller than virtual memory, page faults happen. In case of page fault,
+Operating System might have to replace one of the existing pages with the newly needed page. Different page 
+replacement algorithms suggest different ways to decide which page to replace. The target for all algorithms 
+is to reduce the number of page faults.
+
+Page Replacement Algorithms :
+
+First In First Out (FIFO) –
+This is the simplest page replacement algorithm. In this algorithm, the operating system keeps track of all pages 
+in the memory in a queue, the oldest page is in the front of the queue. When a page needs to be replaced page in the 
+front of the queue is selected for removal.
+
+Least Recently Used –
+In this algorithm page will be replaced which is least recently used.
+
+---------------------------------Problem ------------------------------------------------------------------------------------------
+You simulate some page-replacement algorithms and compare their
+performances. Your simulations should be able to take in the required parameters from a data file in
+the following format:
+
+•The first line of the file contains two integers in this order: the number of pages in the reference
+string, and the number of page frames.
+•The rest of the file contains page reference string as a sequence of integers that are the page
+numbers (in virtual address space) accessed by the process in sequence.
+
+The simulator will simulate the behavior of the following page-replacement algorithms on the
+reference string, andreport the number of page faults generated for each algorithm:
+•FIFO
+•LFU
+•LRU
+
+All the algorithms above are described in your text book. The simulator should take the following
+command-linearguments (in this sequence): the name of the data file, a sequence of strings
+(maximum three) from the following sets: FF, LF, LR (meaning the above three algorithms
+respectively). The simulator simulates only the algorithms specified inthe command line. If no
+algorithm is specified, all three are simulated.Submit the file page.c containing a main function, and
+the implementation of the above three algorithms. Each of the algorithms should be implemented as
+a separate function that is called from the main function.
+
+
+
